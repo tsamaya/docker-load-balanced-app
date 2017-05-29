@@ -1,0 +1,24 @@
+version: '3'
+services:
+  app1:
+    container_name: app1
+    build: ./app
+    ports:
+      - '3001:3000'
+    environment:
+      MESSAGE: 'First instance'
+  app2:
+    container_name: app2
+    build: ./app
+    ports:
+      - '3002:3000'
+    environment:
+      MESSAGE: 'Second instance'
+  web:
+    container_name: webnginx
+    build: ./nginx
+    ports:
+      - '88:80'
+    depends_on:
+      - app1
+      - app2

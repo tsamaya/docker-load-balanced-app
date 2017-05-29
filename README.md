@@ -3,6 +3,16 @@
 This repository is following the tutorial : [Load Balancing Node.js Applications with NGINX and Docker](https://auth0.com/blog/load-balancing-nodejs-applications-with-nginx-and-docker/)
 
 
+## docker-compose
+
+Addition to the tutorial, this repo contains a docker-compose.yml file to easy replace all command line to build and run the app and nginx.
+
+
+
+## Step by Step
+
+
+
 The simple [node](https://nodejs.org/) app
 
 the simple node application :
