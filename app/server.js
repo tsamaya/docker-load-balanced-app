@@ -1,7 +1,9 @@
-var http = require('http');
-var fs = require('fs');
+const http = require('http');
 
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  res.end(`${process.env.MESSAGE}`);
+const message = process.env.MESSAGE || "hello buddy!";
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end(`${message}\n`);
 }).listen(3000);
