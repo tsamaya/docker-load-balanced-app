@@ -1,8 +1,8 @@
-FROM mhart/alpine-node
+FROM node:8-alpine
 
-RUN mkdir -p /usr/src/app
-COPY server.js /usr/src/app
+RUN mkdir -p /srv/app
+COPY server.js /srv/app
 
 EXPOSE 3000
 
-CMD [ "node", "/usr/src/app/server" ]
+CMD [ "node", "/srv/app/server" ]
