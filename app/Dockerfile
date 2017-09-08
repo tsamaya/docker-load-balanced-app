@@ -1,8 +1,10 @@
 FROM node:8-alpine
 
+ARG app_port
+
 RUN mkdir -p /srv/app
 COPY server.js /srv/app
 
-EXPOSE 3000
+EXPOSE ${app_port}
 
 CMD [ "node", "/srv/app/server" ]
