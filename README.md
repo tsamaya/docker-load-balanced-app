@@ -4,8 +4,16 @@ This repository is following the tutorial : [Load Balancing Node.js Applications
 
 ## get started
 
-`clone this repository`
-`$ cd /path/to/cloned/repository`
+  `clone this repository`
+  `$ cd /path/to/cloned/repository`
+
+### create an `.env` file
+
+create or edit .env file to specify ports used:
+  ```
+  NGINX_EXTERNAL_PORT=88
+  APP_PORT=3000
+  ```
 
 ### docker-compose
 
