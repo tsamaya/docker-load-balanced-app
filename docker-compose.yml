@@ -1,4 +1,4 @@
-version: '3.2'
+version: '3.8'
 services:
   app1:
     build:
@@ -10,6 +10,7 @@ services:
     environment:
       MESSAGE: 'First instance'
       APP_PORT: ${APP_PORT}
+
   app2:
     build:
       context: ./app
@@ -20,6 +21,7 @@ services:
     environment:
       MESSAGE: 'Second instance'
       APP_PORT: ${APP_PORT}
+
   web:
     build:
       context: ./nginx
